@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+a:hover {
+    color: gray;
+}
+
+p, h1, h2, h3, h4, h5, h6, header, nav, section, article, aside, footer {
+    font-family: Verdana;
+    font-weight: normal;
+    color: white;
+    z-index: 1;
+}
+
+header {
+    display: flex;
+    font-size: larger;
+    justify-content: center;
+    background-color: rgb(21, 21, 21);
+    width: 105.1%;
+    margin-left: -4.55%;
+    top: 0;
+    margin-top: -0.75%;
+    position: fixed;
+    margin-bottom: 20%;
+    z-index: -9;
+}
+
+section {
+    justify-content: center;
+    position: static;
+    padding-bottom: 3%;
+    padding-top: 1%;
+    top: 0;
+    background-color: rgb(21, 21, 21);
+    width: 101.5%;
+    margin-left: -1%;
+}
+
+.D {
+     position: fixed; 
+     z-index: 10; 
+     display: flex; 
+     color:white;
+     margin-top: 45px;
+     margin-left: 70%;
+     font-size: small;
+}
+
+.E {
+    color: white;
+}
+
+.A {
+    display: flex;
+    position: relative;
+    color: white;
+    font-family: Verdana;
+    z-index: 1;
+}
+
+.B {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    border-radius: 6px;
+    border-color:rgb(21, 21, 21);
+    border-style: solid;
+}
+
+.F {
+    position: absolute;
+    top: 20%;
+    display: flex;
+    width: fit-content;
+    padding: 1%;
+    background-color: rgb(21, 21, 21);
+    flex-direction: column;
+}
+
+hr {
+    border: none;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        overflow-y: scroll;
+        background-color: rgb(21, 21, 21);
+    }
+    img {
+        display: none;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    img {
+        filter: saturate(10000);
+    }
+}
+
+@media screen and (max-height:720px) {
+    body {
+        overflow-y: scroll;
+    }
+    header {
+        position: absolute;
+    }
+    .D {
+        position: absolute;
+    }
+}
+
+</style>
+</head>
+<body>
+
+
+<header><h1><a href="C:\Users\gr315099\OneDrive - Gradia\Tiedostot\HTML\Ravintola2.html" style="text-decoration: none;" class="E">Lapintaika</a></h1><a href="C:\Users\gr315099\OneDrive - Gradia\Tiedostot\HTML\Palautelomake.html" style="text-decoration: none;" class="D">Palautelomake</a></header>
+
+<img src="Ravintolakuva.jpg" style="position: absolute; z-index: -10000; width: 100%; right: 0%;">
+
+
+<form style="justify-content: center; display: flex;">
+
+<div class="F" style="border-radius: 10px;">
+
+<label for="Päivä ja kello" class="A">Varauksen päivämäärä ja kellonaika:</label>
+<input type="date" id="Varauksen pvm" name="Varauksen pvm" style="width: fit-content;" class="B" max="2026-01-01" min="2020-01-01" required>
+<input type="time" id="Varauksen aika" name="Varauksen aika" style="width: fit-content;" class="B" max="16:00" min="08:00" required>
+
+<hr>
+
+<label for="Ruoan tuonti aika" class="A">Kauanko joudit odottamaan ruoan tuotnia (Minuutteina)?</label>
+<input type="number" id="Odotus aika" name="Odotus aika" style="width: 10%;" class="B" max="240" required>
+
+<hr>
+
+<label for="Arvio" class="A">Tyydyttikö ruoan laatu?</label>
+<input type="range" id="Arvio" name="Arvio" class="B" style="width: fit-content; accent-color: white;" min="1" max="10" oninput="this.nextElementSibling.value = this.value" value="10" required>
+<output style="color: white; display: flex; position: relative; left: 140px; bottom: 18.5px; font-family: Verdana; font-size: small;">10</output>
+
+<label for="Palvelu" class="A">Palvelun laatu</label>
+<input type="range" id="Palvelu" name="Palvelu" class="B" style="width: fit-content; accent-color: white;" min="1" max="10" oninput="this.nextElementSibling.value = this.value" value="10" required>
+<output style="color: white; display: flex; position: relative; left: 140px; bottom: 18.5px; font-family: Verdana; font-size: small;">10</output>
+
+<label for="Muu palaute" class="A">Muuta palautetta?</label>
+<input type="text" id="Muu palaute" name="Muu palaute" class="B" style="height: 20px;" required>
+
+<hr>
+
+<label for="Yhteystiedot" class="A">Yhteystiedot (Ei pakolliset)</label>
+
+<hr>
+
+<label for="Etunimi" class="A">Etunimi</label>
+<input type="text" id="Etunimi" name="Etunimi" class="B" style="width: fit-content;">
+
+<hr>
+
+<label for="Sukunimi" class="A">Sukunimi</label>
+<input type="text" id="Sukunimi" name="Sukunimi" class="B" style="width: fit-content;">
+
+<hr>
+
+<label for="Puhelin numero" class="A">Puhelin numero</label>
+<input type="tel" id="Puhelin number" name="Puhelin numero" class="B" style="width: fit-content;">
+
+<hr>
+
+<input type="submit" style="width: fit-content; background-color: white;">
+
+</div>
+
+</form>
+
+</body>
+</html>
